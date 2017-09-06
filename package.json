@@ -2,10 +2,7 @@
   "name": "angular-barcode-listener",
   "version": "1.5.2",
   "description": "Listen for barcode scanner events in your Angular application",
-  "author": "Good Eggs <open-source@goodeggs.com>",
-  "contributors": [
-    "Max Edmands <me@maxedmands.com>"
-  ],
+  "author": "Danhoss",
   "license": "MIT",
   "keywords": [
     "barcode angular scanner"
@@ -13,10 +10,10 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/goodeggs/angular-barcode-listener.git"
+    "url": "git://github.com/danhoss/angular-barcode-listener.git"
   },
-  "homepage": "https://github.com/goodeggs/angular-barcode-listener",
-  "bugs": "https://github.com/goodeggs/angular-barcode-listener/issues",
+  "homepage": "https://github.com/danhoss/angular-barcode-listener",
+  "bugs": "https://github.com/danhoss/angular-barcode-listener/issues",
   "devDependencies": {
     "angular": "^1.4.10",
     "angular-mocks": "^1.4.10",
