@@ -110,7 +110,7 @@
                 var scannedPrefix = '';
                 var finishScan = function finishScan() {
                     if (codeBuffer) {
-                        if (!barcodeLength) scanHandler(codeBuffer); else if (codeBuffer.length >= barcodeLength) scanHandler(codeBuffer.substr(0, barcodeLength));
+                        scanHandler(codeBuffer);
                     }
                     scannedPrefix = '';
                     codeBuffer = '';
@@ -120,11 +120,12 @@
                     var charIndex = barcodePrefix.indexOf(char);
                     var expectedPrefix = barcodePrefix.slice(0, charIndex);
 
+                    if (codeBuffer.length && e.which === 13) {
+                        finishScan();
+                    }
+
                     if (scannedPrefix === barcodePrefix && /[^\s]/.test(char)) {
                         codeBuffer += char;
-                        if (codeBuffer.length == barcodeLength) {
-                            finishScan();
-                        }
                     } else if (scannedPrefix === expectedPrefix && char === barcodePrefix.charAt(charIndex)) {
                         scannedPrefix += char;
                     }
