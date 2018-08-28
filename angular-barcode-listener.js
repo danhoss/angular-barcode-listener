@@ -109,11 +109,14 @@
                 var codeBuffer = '';
                 var scannedPrefix = '';
                 var finishScan = function finishScan() {
-                    if (codeBuffer) {
-                        scanHandler(codeBuffer);
+                    var codeBufferTmp = codeBuffer;
+
+                    if (codeBufferTmp) {
+                        codeBuffer = '';
+                        scannedPrefix = '';
+
+                        scanHandler(codeBufferTmp);
                     }
-                    scannedPrefix = '';
-                    codeBuffer = '';
                 };
                 var keypressHandler = function keypressHandler(e) {
                     var char = String.fromCharCode(e.which);
