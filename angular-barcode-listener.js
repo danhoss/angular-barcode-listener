@@ -74,14 +74,10 @@
                 var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
                 var barcodePrefix = _ref.barcodePrefix;
-                var barcodeLength = _ref.barcodeLength;
                 var scanHandler = arguments[1];
 
                 if (typeof barcodePrefix !== 'string') {
                     throw new TypeError('barcodePrefix must be a string');
-                }
-                if (typeof barcodeLength !== 'number') {
-                    throw new TypeError('barcodeLength must be a number');
                 }
                 if (typeof scanHandler !== 'function') {
                     throw new TypeError('scanHandler must be a function');
